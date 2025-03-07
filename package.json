@@ -1,0 +1,56 @@
+{
+  "name": "@diaskappassov/casbin-react",
+  "version": "0.0.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "casbin-react",
+    "casbin-js",
+    "ABAC",
+    "RBAC",
+    "ACL",
+    "auth"
+  ],
+  "scripts": {
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@diaskappassov/casbin-js": "0.6.x"
+  },
+  "peerDependencies": {
+    "react": ">=17.0.0",
+    "react-dom": ">=17.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.21.0",
+    "@types/node": "^22.13.9",
+    "@types/react": ">=17.0.0",
+    "@types/react-dom": ">=17.0.0",
+    "@vitejs/plugin-react-swc": "^3.8.0",
+    "eslint": "^9.21.0",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "globals": "^15.15.0",
+    "typescript": "~5.7.2",
+    "typescript-eslint": "^8.24.1",
+    "vite": "^6.2.0",
+    "vite-plugin-dts": "^4.5.3"
+  },
+  "author": "Dias Kappassov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Dias1c/casbin-react/issues"
+  },
+  "homepage": "https://github.com/Dias1c/casbin-react"
+}
