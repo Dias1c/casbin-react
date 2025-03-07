@@ -1,4 +1,4 @@
-# @diaskappassov/casbin-react
+# casbin-react
 
 🔐 Simple library that supports access control models like ACL, RBAC, ABAC for React Application.
 
