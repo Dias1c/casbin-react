@@ -53,5 +53,6 @@
   "bugs": {
     "url": "https://github.com/Dias1c/casbin-react/issues"
   },
-  "homepage": "https://github.com/Dias1c/casbin-react"
+  "homepage": "https://github.com/Dias1c/casbin-react",
+  "repository": "https://github.com/Dias1c/casbin-react"
 }
