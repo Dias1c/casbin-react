@@ -11,6 +11,7 @@ export type TFuncGetPermissionsInitData = () =>
 
 export type TFuncLoadPermissions = (props?: {
   onInitCallback?: () => void;
+  onError?: TFuncOnError;
 }) => Promise<void>;
 
 export function createPermissionsLoad({
@@ -23,7 +24,7 @@ export function createPermissionsLoad({
   let isLoading = false;
 
   const loadPermissions: TFuncLoadPermissions = async (props) => {
-    const { onInitCallback } = props ?? {};
+    const { onInitCallback, onError } = props ?? {};
 
     if (onInitCallback)
       authorizer.onInitDisposableCallbacks.push(onInitCallback);
@@ -33,6 +34,12 @@ export function createPermissionsLoad({
       isLoading = true;
       const data = await get();
       await authorizer.init(data.m, data.p);
+    } catch (err) {
+      onError?.(err);
+      if (!onError) {
+        console.warn("casbin-react:err:loadPermissions:", err);
+      }
+      throw err;
     } finally {
       isLoading = false;
     }
