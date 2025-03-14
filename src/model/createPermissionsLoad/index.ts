@@ -35,11 +35,10 @@ export function createPermissionsLoad({
       const data = await get();
       await authorizer.init(data.m, data.p);
     } catch (err) {
-      onError?.(err);
+      await onError?.(err);
       if (!onError) {
-        console.warn("casbin-react:err:loadPermissions:", err);
+        throw err;
       }
-      throw err;
     } finally {
       isLoading = false;
     }

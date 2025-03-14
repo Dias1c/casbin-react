@@ -14,7 +14,7 @@ export const createActionPermissionsReset = ({
         setLoading(true);
         authorizer.reset();
       } catch (err) {
-        onError?.(err);
+        await onError?.(err);
       } finally {
         setLoading(false);
       }

@@ -32,8 +32,7 @@ export function createPermissionsCanAll<T extends string>({
           await setAvailableAfterInit();
         }
       } catch (err) {
-        onError?.(err);
-        setAvailable(false);
+        await onError?.(err);
       } finally {
         setLoading(false);
       }

@@ -14,7 +14,7 @@ export const createActionPermissionsInit = ({
         setLoading(true);
         await loadPermissions();
       } catch (err) {
-        onError?.(err);
+        await onError?.(err);
       } finally {
         setLoading(false);
       }

@@ -33,7 +33,6 @@ export function createPermissionsCanAny<T extends string>({
         }
       } catch (err) {
         onError?.(err);
-        setAvailable(false);
       } finally {
         setLoading(false);
       }
