@@ -19,6 +19,7 @@
     "RBAC",
     "ACL",
     "auth",
+    "authz",
     "permissions"
   ],
   "scripts": {
