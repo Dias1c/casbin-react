@@ -145,3 +145,7 @@ export function App() {
 - [ ] Documentation
 - [ ] Test
 - [ ] Release v1.0.0
+
+## Author
+
+- [Dias1c - Dias Kappassov](https://github.com/Dias1c)
