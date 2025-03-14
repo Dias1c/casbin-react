@@ -21,7 +21,7 @@
 ## Installation
 
 ```sh
-npm i @diaskappassov/casbin-react
+npm i --save-exact @diaskappassov/casbin-react@0.1
 ```
 
 ## Usage
